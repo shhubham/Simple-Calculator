@@ -1,0 +1,76 @@
+body{
+	background-color: black;
+	}
+
+.main{
+	width: 25vw;
+	height: 75vh;
+	background-color: #E6E1E1;
+	margin: auto auto;
+	top: 5vh;
+	position: relative;
+}
+
+.screen{
+	line-height: 7vh;
+	margin: 0px;
+	padding: 0px;
+	text-align: right;
+
+}
+
+.scr{
+	min-height: 20vh;
+}
+
+.keyboard{
+	height: 61vh;
+	
+}
+
+
+#history{
+	font-size: 3vh;
+	color: #878686;
+	margin: 0px 15px;
+	padding: 10px 0px;
+}
+
+#current{
+	font-size: 5vh;
+	margin: 0px 15px;
+	padding: 10px 0px;
+
+
+}
+
+.d-flex{
+ display: flex;
+ direction: row;
+  justify-content: space-around;
+  margin: 15px auto;
+}
+
+.num , .op{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	margin: 3%;
+	border-width: 0px;
+	font-weight: bold;
+	font-size: 20px;
+
+}
+
+.num{
+	background-color: #E6E1E1;
+}
+
+.num:active , .op:active{
+	font-size: 25px;
+}
+
+.num:focus, .op:focus{
+	outline: 0px;
+}
+
