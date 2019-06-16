@@ -33,13 +33,33 @@ for (var i = 0; i < operator.length; i++) {
             PrintResult("");
 
 
-        }
+        } else if (this.id == "del") {
+            var x = getResult();
+            x = x.substr(0, x.length - 1);
+            PrintResult(x);
 
-        if(this.id=="del"){
-        	var x=getResult();
-        	x=x.substr(0,x.length-1);
-        	PrintResult(x);
+        } else {
+            var result = getResult();
+            var history = gethistory();
 
+            if (this.id == "eq") {
+                history = history + result;
+                result = eval(history);
+                PrintResult(result);
+                PrintHistory(history);
+            } else {
+                if (result != "") {
+                    history = result + this.id;
+                    PrintHistory(history);
+                    PrintResult("");
+                } else if (result == "") {
+                    history = history.substr(0, history.length - 1);
+                    history = history + this.id;
+                    PrintHistory(history);
+                }
+
+
+            }
         }
 
 
